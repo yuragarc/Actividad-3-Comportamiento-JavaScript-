@@ -1,104 +1,318 @@
+/**
+ * Archivo de estilos CSS para el Generador de Saludos
+ * Incluye estilos responsivos y efectos visuales
+ */
+
+/* Reset básico y configuración general */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
 }
 
 body {
-    background-color: #f5f5f5;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-}
-
-.container {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    width: 90%;
-    max-width: 500px;
-    text-align: center;
-    margin-top: 40px;
-}
-
-h1 {
-    color: #314866;
-    margin-bottom: 10px;
-}
-
-h2 {
-    color: #38507a;
-    margin-bottom: 10px;
-    font-size: 1.2em;
-}
-
-.instruccion {
-    margin-bottom: 18px;
-    font-size: 1em;
-    color: #444;
-}
-
-.input-section {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-input {
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    width: 100%;
-    font-size: 16px;
-    outline: none;
-    transition: border-color 0.3s;
-}
-input:focus {
-    border-color: #007bff;
-}
-
-button {
-    padding: 12px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-button:hover {
-    background-color: #0056b3;
-}
-
-.result-section {
-    min-height: 60px;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    padding: 16px;
+    color: #333;
+}
+
+/* Contenedor principal */
+.container {
+    width: 100%;
+    max-width: 28rem;
+    margin: 0 auto;
+}
+
+/* Tarjeta principal */
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Encabezado de la tarjeta */
+.card-header {
+    text-align: center;
+    padding: 32px 24px 16px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-subtitle {
+    font-size: 1rem;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+/* Contenido de la tarjeta */
+.card-content {
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Grupo de input */
+.input-group {
+    display: flex;
+    flex-direction: column;
     gap: 8px;
 }
 
-#saludo {
-    font-size: 20px;
-    color: #007bff;
-    font-weight: bold;
+.input-label {
+    font-weight: 500;
+    color: #4a5568;
+    font-size: 0.875rem;
 }
 
-#caracteres {
-    font-size: 16px;
-    color: #6c757d;
+.input-field {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background: white;
 }
 
-footer {
-    margin-top: 32px;
+.input-field:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.input-field::placeholder {
+    color: #a0aec0;
+}
+
+/* Botón principal */
+.btn-primary {
+    width: 100%;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Contenedores de mensajes */
+.message-container {
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.saludo-container {
+    background-color: #f0fff4;
+    border-color: #c6f6d5;
+}
+
+.caracteres-container {
+    background-color: #eff6ff;
+    border-color: #bfdbfe;
+}
+
+.message {
+    margin: 0;
     text-align: center;
-    color: #38507a;
-    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.saludo-message {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #22543d;
+}
+
+.caracteres-message {
+    font-size: 0.875rem;
+    color: #1e40af;
+}
+
+/* Información adicional */
+.info-tip {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.info-tip p {
+    font-size: 0.75rem;
+    color: #718096;
+    line-height: 1.4;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estados de carga */
+.loading {
+    position: relative;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid transparent;
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Diseño responsivo */
+@media (max-width: 480px) {
+    .container {
+        padding: 8px;
+    }
+    
+    .card-header {
+        padding: 24px 16px 12px;
+    }
+    
+    .card-title {
+        font-size: 1.5rem;
+    }
+    
+    .card-subtitle {
+        font-size: 0.875rem;
+    }
+    
+    .card-content {
+        padding: 24px 16px;
+        gap: 20px;
+    }
+    
+    .input-field {
+        padding: 10px 12px;
+    }
+    
+    .btn-primary {
+        padding: 10px 20px;
+    }
+}
+
+/* Efectos adicionales */
+.card-content > * {
+    transition: all 0.3s ease;
+}
+
+.input-field:valid:not(:placeholder-shown) {
+    border-color: #48bb78;
+}
+
+.input-field:invalid:not(:placeholder-shown) {
+    border-color: #f56565;
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Modo oscuro (opcional) */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+        color: #e2e8f0;
+    }
+    
+    .card {
+        background: #2d3748;
+        border: 1px solid #4a5568;
+    }
+    
+    .input-field {
+        background: #4a5568;
+        border-color: #718096;
+        color: #e2e8f0;
+    }
+    
+    .input-field::placeholder {
+        color: #a0aec0;
+    }
+    
+    .saludo-container {
+        background-color: #1a3a28;
+        border-color: #2d5a3d;
+    }
+    
+    .caracteres-container {
+        background-color: #1a2332;
+        border-color: #2d3a4d;
+    }
+    
+    .saludo-message {
+        color: #68d391;
+    }
+    
+    .caracteres-message {
+        color: #63b3ed;
+    }
+    
+    .info-tip p {
+        color: #a0aec0;
+    }
 }
