@@ -1,17 +1,23 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Evaluación Módulo 3</title>
-    <link rel="stylesheet" href="style.css"> <!-- Agrega tu CSS externo aquí -->
-</head>
-<body>
-    <h1>Página de saludo</h1>
-    <input type="text" id="nombreInput" placeholder="Escribe tu nombre">
-    <button id="btnSaludar">Saludar</button>
-    <p id="saludo"></p>
-    <section id="caracteres"></section>
-
-    <script src="script.js"></script>
-</body>
-</html>
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Evaluación Módulo 3</title>  
+    <link rel="stylesheet" href="style.css">  
+</head>  
+<body>  
+    <main>  
+        <h1>Página de Saludo Personalizado</h1>  
+        <form id="saludoForm">  
+            <label for="nombreInput">Introduce tu nombre:</label>  
+            <input type="text" id="nombreInput" name="nombreInput" required>  
+            <button type="submit">Saludar</button>  
+        </form>  
+        <div id="respuesta">  
+            <p id="saludo"></p>  
+            <p id="caracteres"></p>  
+        </div>  
+    </main>  
+    <script src="script.js"></script>  
+</body>  
+</html>  
