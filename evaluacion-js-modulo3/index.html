@@ -2,36 +2,29 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Test Saludo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación Módulo 3 - JavaScript</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <input type="text" id="nombreInput" placeholder="Nombre">
-    <button id="btnSaludar">Saludar</button>
-    <p id="saludo"></p>
-    <p id="caracteres"></p>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const nombreInput = document.getElementById('nombreInput');
-            const btnSaludar = document.getElementById('btnSaludar');
-            const saludoElement = document.getElementById('saludo');
-            const caracteresElement = document.getElementById('caracteres');
-            function generarSaludo() {
-                const nombre = nombreInput.value.trim();
-                if (nombre === '') {
-                    saludoElement.textContent = 'Por favor, introduce un nombre o palabra';
-                    caracteresElement.textContent = '';
-                } else {
-                    saludoElement.textContent = `¡Hola, ${nombre}!`;
-                    caracteresElement.textContent = `Tu nombre o palabra tiene ${nombre.length} caracteres.`;
-                }
-            }
-            btnSaludar.addEventListener('click', generarSaludo);
-            nombreInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    generarSaludo();
-                }
-            });
-        });
-    </script>
+    <div class="container">
+        <h1>Bienvenido a mi primera página Web</h1>
+        <h2>Prueba mi evaluación 3</h2>
+        <p class="instruccion">
+            Introduce tu nombre o una palabra y pincha en el botón.
+        </p>
+        <div class="input-section">
+            <input type="text" id="nombreInput" placeholder="Escribe tu nombre o palabra aquí">
+            <button id="btnSaludar">Saludar</button>
+        </div>
+        <div class="result-section">
+            <p id="saludo"></p>
+            <p id="caracteres"></p>
+        </div>
+    </div>
+    <footer>
+        <p>¡Gracias por utilizar la página!</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
