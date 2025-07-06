@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Saludos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="card-title">Generador de Saludos</h1>
+                <p class="card-subtitle">Ingresa tu nombre y recibe un saludo personalizado</p>
+            </div>
+            
+            <div class="card-content">
+                <!-- Input de texto para el nombre -->
+                <div class="input-group">
+                    <label for="nombre" class="input-label">Tu nombre:</label>
+                    <input 
+                        type="text" 
+                        id="nombre" 
+                        class="input-field" 
+                        placeholder="Escribe tu nombre aquí..." 
+                        maxlength="50"
+                    >
+                </div>
+
+                <!-- Botón para generar saludo -->
+                <button id="btnSaludar" class="btn-primary">
+                    Saludar
+                </button>
+
+                <!-- Párrafo para mostrar el saludo generado -->
+                <div id="saludoContainer" class="message-container saludo-container" style="display: none;">
+                    <p id="saludo" class="message saludo-message"></p>
+                </div>
+
+                <!-- Sección para mostrar información de caracteres -->
+                <div id="caracteresContainer" class="message-container caracteres-container" style="display: none;">
+                    <p id="infoCaracteres" class="message caracteres-message"></p>
+                </div>
+
+                <!-- Información adicional -->
+                <div class="info-tip">
+                    <p>💡 Presiona Enter o haz clic en "Saludar" para generar tu saludo</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
