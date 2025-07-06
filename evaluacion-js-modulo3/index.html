@@ -3,28 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evaluación Módulo 3 - JavaScript</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Generador de Saludos</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Bienvenido a mi primera página Web</h1>
-        <h2>Prueba mi evaluación 3</h2>
-        <p class="instruccion">
-            Introduce tu nombre o una palabra y pincha en el botón.
-        </p>
-        <div class="input-section">
-            <input type="text" id="nombreInput" placeholder="Escribe tu nombre o palabra aquí">
-            <button id="btnSaludar">Saludar</button>
-        </div>
-        <div class="result-section">
-            <p id="saludo"></p>
-            <p id="caracteres"></p>
+        <div class="card">
+            <div class="card-header">
+                <h1 class="card-title">Generador de Saludos</h1>
+                <p class="card-subtitle">Ingresa tu nombre y recibe un saludo personalizado</p>
+            </div>
+            
+            <div class="card-content">
+                <!-- Input de texto para el nombre -->
+                <div class="input-group">
+                    <label for="nombre" class="input-label">Tu nombre:</label>
+                    <input 
+                        type="text" 
+                        id="nombre" 
+                        class="input-field" 
+                        placeholder="Escribe tu nombre aquí..." 
+                        maxlength="50"
+                    >
+                </div>
+
+                <!-- Botón para generar saludo -->
+                <button id="btnSaludar" class="btn-primary">
+                    Saludar
+                </button>
+
+                <!-- Párrafo para mostrar el saludo generado -->
+                <div id="saludoContainer" class="message-container saludo-container" style="display: none;">
+                    <p id="saludo" class="message saludo-message"></p>
+                </div>
+
+                <!-- Sección para mostrar información de caracteres -->
+                <div id="caracteresContainer" class="message-container caracteres-container" style="display: none;">
+                    <p id="infoCaracteres" class="message caracteres-message"></p>
+                </div>
+
+                <!-- Información adicional -->
+                <div class="info-tip">
+                    <p>💡 Presiona Enter o haz clic en "Saludar" para generar tu saludo</p>
+                </div>
+            </div>
         </div>
     </div>
-    <footer>
-        <p>¡Gracias por utilizar la página!</p>
-    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
