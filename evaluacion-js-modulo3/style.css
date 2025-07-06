@@ -9,7 +9,8 @@ body {
     background-color: #f5f5f5;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -17,15 +18,28 @@ body {
     background-color: #ffffff;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     width: 90%;
     max-width: 500px;
     text-align: center;
+    margin-top: 40px;
 }
 
 h1 {
-    color: #333;
-    margin-bottom: 25px;
+    color: #314866;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #38507a;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.instruccion {
+    margin-bottom: 18px;
+    font-size: 1em;
+    color: #444;
 }
 
 .input-section {
@@ -38,13 +52,12 @@ h1 {
 input {
     padding: 12px 15px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 6px;
     width: 100%;
     font-size: 16px;
     outline: none;
     transition: border-color 0.3s;
 }
-
 input:focus {
     border-color: #007bff;
 }
@@ -54,12 +67,11 @@ button {
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s;
 }
-
 button:hover {
     background-color: #0056b3;
 }
@@ -84,12 +96,9 @@ button:hover {
     color: #6c757d;
 }
 
-@media (min-width: 768px) {
-    .input-section {
-        flex-direction: row;
-    }
-    
-    button {
-        width: auto;
-    }
+footer {
+    margin-top: 32px;
+    text-align: center;
+    color: #38507a;
+    font-size: 1.1em;
 }
