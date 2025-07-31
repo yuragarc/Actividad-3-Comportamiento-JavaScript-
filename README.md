@@ -2,7 +2,7 @@
 
 ## ¿Qué hace tu página?
 Permite al usuario ingresar su nombre, pulsar "Saludar" y recibir un saludo personalizado junto a la cantidad de caracteres del nombre digitado.
-
+https://yuragarc.github.io/Actividad-3-Comportamiento-JavaScript-/
 ## ¿Qué aprendí al desarrollar el proyecto?
 Reforcé conocimientos sobre el uso de archivos HTML, CSS y JavaScript externos, la manipulación del DOM, y la importancia de validar entradas del usuario.
 
